@@ -69,10 +69,16 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>C:\Users\melis\Documents\Game Programming\EVO_Engine\EVO_WorkingCopy\EVO_Engine\SDKs\glew-2.0.0\include\GL;C:\Users\melis\Documents\Game Programming\EVO_Engine\EVO_WorkingCopy\EVO_Engine\SDKs\SDL2-2.0.5\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)\SDKs\glew-2.0.0\include\GL;$(SolutionDir)\SDKs\SDL2-2.0.5\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>$(SolutionDir)/SDK_Source/glew-2.0.0/include;$(SolutionDir)/SDK_Source/SDL2-2.0.5/include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(SolutionDir)SDKs\glew-2.0.0\include\GL;$(SolutionDir)SDKs\SDL2-2.0.5\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(SolutionDir)SDKs\glew-2.0.0\include\GL;$(SolutionDir)SDKs\SDL2-2.0.5\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -92,6 +98,11 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)SDKs\glew-2.0.0\lib\Release\x64;$(SolutionDir)SDKs\SDL2-2.0.5\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2test.lib;glew32.lib;glew32s.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -104,7 +115,7 @@
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>C:\Users\melis\Documents\Game Programming\EVO_Engine\EVO_WorkingCopy\EVO_Engine\SDKs\glew-2.0.0\lib\Release\Win32;C:\Users\melis\Documents\Game Programming\EVO_Engine\EVO_WorkingCopy\EVO_Engine\SDKs\SDL2-2.0.5\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)\SDKs\glew-2.0.0\lib\Release\Win32;$(SolutionDir)\SDKs\SDL2-2.0.5\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2test.lib;glew32.lib;glew32s.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
     </Link>
@@ -120,10 +131,26 @@
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)SDKs\glew-2.0.0\lib\Release\x64;$(SolutionDir)SDKs\SDL2-2.0.5\lib\x64;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2test.lib;glew32.lib;glew32s.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="EVO_Engine\Core\Window.cpp" />
+    <ClCompile Include="EVO_Engine\DataTypes\GameState.cpp" />
+    <ClCompile Include="EVO_Engine\EVOEngine.cpp" />
     <ClCompile Include="EVO_Engine\Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EVO_Engine\Core\EngineSystem.h" />
+    <ClInclude Include="EVO_Engine\Core\Window.h" />
+    <ClInclude Include="EVO_Engine\DataTypes\GameState.h" />
+    <ClInclude Include="EVO_Engine\EVOEngine.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="glew32.dll" />
+    <None Include="SDL2.dll" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
