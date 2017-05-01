@@ -9,6 +9,7 @@ namespace EVO_ENGINE {
 		virtual ~EngineSystem() {}
 
 		virtual bool Initialize() = 0;
+		virtual void Update() = 0;
 		virtual void Shutdown() = 0;
 
 	};

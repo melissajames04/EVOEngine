@@ -34,6 +34,8 @@ bool EVOEngine::Initialize() {
 		return false;
 	}
 
+	timer.Initialize();
+
 	GameState::GetInstance()->SetRunning(true);
 
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
@@ -46,6 +48,7 @@ void EVOEngine::Run() {
 	while (GameState::GetInstance()->IsRunning()) {
 		Update(1 / 60.f);
 		Render();
+		SDL_Delay(timer.GetSleepTime(GameState::GetInstance()->GetFPS()));
 	}
 	
 	if (!GameState::GetInstance()->IsRunning()) {
@@ -59,7 +62,8 @@ void EVOEngine::Update(const float deltaTime) {
 
 void EVOEngine::Render() {
 
-	SDL_GL_SwapWindow(windowInstance.GetWindow());
+	//Swaps the windows
+	windowInstance.Update();
 }
 
 

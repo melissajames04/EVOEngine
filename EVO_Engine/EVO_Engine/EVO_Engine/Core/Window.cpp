@@ -91,6 +91,11 @@ void Window::InitializeEnables() {
 
 }
 
+void Window::Update() {
+
+	SDL_GL_SwapWindow(SDLWindow);
+}
+
 void Window::SetWindowSize(const int width_, const int height_) {
 
 	windowBounds.w = width_;

@@ -1,3 +1,4 @@
-﻿  Main.cpp
+﻿  Timer.cpp
+c:\users\melis\documents\game programming\evo_engine\evo_workingcopy\evo_engine\evo_engine\evo_engine\core\timer.h(27): warning C4244: 'return': conversion from 'unsigned int' to 'float', possible loss of data
   EVO_Engine.vcxproj -> C:\Users\melis\Documents\Game Programming\EVO_Engine\EVO_WorkingCopy\EVO_Engine\x64\Debug\EVO_Engine.exe
   EVO_Engine.vcxproj -> C:\Users\melis\Documents\Game Programming\EVO_Engine\EVO_WorkingCopy\EVO_Engine\x64\Debug\EVO_Engine.pdb (Partial PDB)

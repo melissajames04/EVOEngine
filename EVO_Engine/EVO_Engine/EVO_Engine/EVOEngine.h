@@ -4,6 +4,8 @@
 #include <memory>
 
 #include "Core\Window.h"
+#include "Core\Timer.h"
+
 #include "DataTypes\GameState.h"
 
 namespace EVO_ENGINE {
@@ -32,6 +34,9 @@ namespace EVO_ENGINE {
 
 		void Update(const float deltaTime);
 		void Render();
+
+		Timer timer;
+		
 		
 	};
 }

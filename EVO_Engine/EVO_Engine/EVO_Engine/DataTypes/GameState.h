@@ -18,10 +18,12 @@ namespace EVO_ENGINE {
 
 		inline bool IsRunning() { return isRunning; }
 		inline bool IsPaused() { return isPaused; }
+		inline short GetFPS() { return fps; }
 
 		//Setters
 		inline void SetRunning(bool running_) { isRunning = running_; }
 		inline void SetPaused(bool paused_) { isPaused = paused_; }
+		inline void SetFPS(short fps_) { fps = fps_; }
 
 	protected:
 		GameState();
@@ -32,6 +34,7 @@ namespace EVO_ENGINE {
 
 		bool isRunning;
 		bool isPaused;
+		short fps;
 	};
 }
 

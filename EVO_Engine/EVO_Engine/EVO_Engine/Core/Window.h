@@ -24,6 +24,7 @@ namespace EVO_ENGINE {
 
 		virtual bool Initialize();
 		bool Initialize(std::string windowName_);
+		virtual void Update();
 		virtual void Shutdown();
 
 		//Setters
