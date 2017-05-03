@@ -37,6 +37,7 @@ bool EVOEngine::Initialize() {
 	timer.Initialize();
 
 	GameState::GetInstance()->SetRunning(true);
+	GameState::GetInstance()->SetWindowSize(windowInstance.GetWidth(), windowInstance.GetHeight());
 
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
@@ -57,6 +58,7 @@ void EVOEngine::Run() {
 }
 
 void EVOEngine::Update(const float deltaTime) {
+	EventListener::Update();
 
 }
 

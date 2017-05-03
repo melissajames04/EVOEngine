@@ -8,6 +8,8 @@
 
 #include "DataTypes\GameState.h"
 
+#include "Input\EventListener.h"
+
 namespace EVO_ENGINE {
 	
 	class EVOEngine {

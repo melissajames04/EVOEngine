@@ -141,6 +141,10 @@
     <ClCompile Include="EVO_Engine\Core\Window.cpp" />
     <ClCompile Include="EVO_Engine\DataTypes\GameState.cpp" />
     <ClCompile Include="EVO_Engine\EVOEngine.cpp" />
+    <ClCompile Include="EVO_Engine\Input\EventListener.cpp" />
+    <ClCompile Include="EVO_Engine\Input\GamePadEventListener.cpp" />
+    <ClCompile Include="EVO_Engine\Input\KeyEventListener.cpp" />
+    <ClCompile Include="EVO_Engine\Input\MouseEventListener.cpp" />
     <ClCompile Include="EVO_Engine\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -148,7 +152,16 @@
     <ClInclude Include="EVO_Engine\Core\Timer.h" />
     <ClInclude Include="EVO_Engine\Core\Window.h" />
     <ClInclude Include="EVO_Engine\DataTypes\GameState.h" />
+    <ClInclude Include="EVO_Engine\DataTypes\InputEvent.h" />
     <ClInclude Include="EVO_Engine\EVOEngine.h" />
+    <ClInclude Include="EVO_Engine\Input\EventListener.h" />
+    <ClInclude Include="EVO_Engine\Input\EventListenerDevice.h" />
+    <ClInclude Include="EVO_Engine\Input\GamePadEventListener.h" />
+    <ClInclude Include="EVO_Engine\Input\GamePadReceiverObject.h" />
+    <ClInclude Include="EVO_Engine\Input\KeyEventListener.h" />
+    <ClInclude Include="EVO_Engine\Input\KeyReceiverObject.h" />
+    <ClInclude Include="EVO_Engine\Input\MouseReceiverObject.h" />
+    <ClInclude Include="EVO_Engine\Input\MouseEventListener.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="glew32.dll" />
